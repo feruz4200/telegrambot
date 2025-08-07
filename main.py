@@ -56,5 +56,8 @@ async def main():
     await app.updater.start_polling()
     await app.updater.idle()
 
-import asyncio
+if __name__ == "__main__":
+    import asyncio
+    from telegram_bot import application
+
     asyncio.run(application.run_polling())
