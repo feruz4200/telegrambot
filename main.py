@@ -36,7 +36,7 @@ Bu — Xitoydan tovar zakaz qilish bo‘yicha 30 KUNLIK to‘liq darslikning ati
 
 ✅ DARSLAR 23-24 AVGUST KUNLARI  AYNAN MANASHU 👇
 
-👉 https://t.me/+_Xpi9AEla5hkNjhi 👈 YOPIQ  KANALDA  BÒLIB ÒTADI "
+👉 https://t.me/+_Xpi9AEla5hkNjhi 👈 YOPIQ  KANALDA  BÒLIB ÒTADI"
     )
 
     # 3. Zayavkani avtomatik qabul qilish
