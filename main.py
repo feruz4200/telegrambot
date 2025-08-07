@@ -20,22 +20,19 @@ async def handle_join_request(update: Update, context: ContextTypes.DEFAULT_TYPE
     await context.bot.send_video(
         chat_id=user_id,
         video="BAACAgIAAxkBAAMLaJRnvDASPPGq9v6ujXCYU-UTDuwAAjdyAAKuaKFIHA_Ac0_i5NQ2BA",
-        caption="📢 2 kunlik BEPUL darslikda nimalar o‘rgatiladi?
-
-1️⃣ 🇨🇳Xitoyning Ichki va tashqi marketplace ning farqi
-2️⃣ Pinduoduo (ichki marketplace) dan to’g’ri ro‘yxatdan o‘tish tartibi
-3️⃣ Kargo turlari – avto va avia kargoning farqi
-4️⃣ Xitoyning Yuannini so‘mga hisoblash usuli
-
-🟡 ESLATMA:
-Bu — Xitoydan tovar zakaz qilish bo‘yicha 30 KUNLIK to‘liq darslikning atigi 2 KUNIgina!
-
-📌 DARSLARIMIZ  sizga yoqsa, qolgan darslarni pul to’lab davom  ettirishingiz mumkin.
-
-✅ DARSLAR 23-24 AVGUST KUNLARI  AYNAN MANASHU 👇
-
-👉 https://t.me/+_Xpi9AEla5hkNjhi 👈 YOPIQ  KANALDA  BÒLIB ÒTADI"
-    )
+        caption = (
+    "SALOM SALOM QARINDOOSHIM!\n\n"
+    "📢 2 kunlik BEPUL darslikda nimalar o‘rgatiladi?\n\n"
+    "1) Xitoyning ichki va tashqi marketplace'lari farqlari\n"
+    "2) Pinduoduo (ichki marketplace) dan to'g'ri ro'yxatdan o'tish\n"
+    "3) Kargo turlari: Avto va Avia kargo farqlari\n"
+    "4) Yuanni so'mga qanday qilib to'g'ri hisoblash kerak\n\n"
+    "Eslatma:\n"
+    "Bu 30 kunlik to‘liq kursning atigi 2 KUNI!\n"
+    "Agar darslar sizga yoqsa, qolgan kunlarni to‘lab davom ettirishingiz mumkin.\n\n"
+    "✅ 23-24 AVGUST KUNLARI darslar aynan mana shu yopiq kanalda bo‘ladi:\n"
+    " https://t.me/+_Xpi9AEla5hkNjhi "
+)    )
 
     # 3. Zayavkani avtomatik qabul qilish
     await context.bot.approve_chat_join_request(
