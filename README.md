@@ -1,1 +1,1 @@
-# telegrambot
+python bot.py
