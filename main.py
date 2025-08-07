@@ -8,11 +8,10 @@ async def handle_join_request(update: Update, context: ContextTypes.DEFAULT_TYPE
     join_request = update.chat_join_request
     user_id = join_request.from_user.id
 
-    await context.bot.send_message(
-        chat_id=user_id,
-        text="👋 Assalomu alaykum! QARINDOSH \nSiz kanalga qo‘shilish uchun so‘rov yubordingiz.\nZayavkangiz qabul qilinyapti!"
-    )
-
+ await context.bot.send_message(
+    chat_id=user_id,
+    text="👋 Assalomu alaykum! QARINDOSH \nSiz kanalga qo‘shilish uchun so‘rov yubordingiz.\nZayavkangiz qabul qilinyapti!"
+)
     await context.bot.approve_chat_join_request(
         chat_id=join_request.chat.id,
         user_id=user_id
