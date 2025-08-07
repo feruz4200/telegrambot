@@ -1,5 +1,9 @@
 from telegram import Update
-from telegram.ext import ApplicationBuilder, ContextTypes, ChatJoinRequestHandler
+from telegram.ext import (
+    ApplicationBuilder,
+    ContextTypes,
+    ChatJoinRequestHandler,
+)
 import logging
 
 # Logging sozlash
@@ -8,18 +12,18 @@ logging.basicConfig(level=logging.INFO)
 # Bot tokeni
 TOKEN = "8477466598:AAGfAxcxlZ2o0SKOQROMw3EyqmsVjXWnHLM"
 
-# ChatJoin so'rovini qayta ishlovchi
+# 1. Zayavkani qabul qilish va salomlashuv
 async def join_request_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.chat_join_request.from_user.id
     chat_id = update.chat_join_request.chat.id
 
-    # 1. Salomlashuv
+    # Salomlashuv xabari
     await context.bot.send_message(
         chat_id=user_id,
         text="👋 Assalomu alaykum QARINDOSH!\nSiz kanalda qatnashish uchun so'rov yubordingiz.\nZayavkangiz qabul qilinmoqda!"
     )
 
-    # 2. Video + caption yuborish
+    # Video va matn yuborish
     await context.bot.send_video(
         chat_id=user_id,
         video="BAACAgIAAxkBAAMLaJRnvDASPPGq9v6ujXCYU-UTDuwAAjdyAAKuaKFIHA_Ac0_i5NQ2BA",
@@ -38,26 +42,20 @@ async def join_request_handler(update: Update, context: ContextTypes.DEFAULT_TYP
         )
     )
 
-    # 3. Avtomatik qabul qilish
+    # Zayavkani avtomatik tasdiqlash
     await context.bot.approve_chat_join_request(
         chat_id=chat_id,
         user_id=user_id
     )
 
-
-# Asosiy ishga tushirish
+# 2. Asosiy dastur
 async def main():
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(ChatJoinRequestHandler(join_request_handler))
 
-    # polling ishga tushirish
-    await app.initialize()
-    await app.start()
-    await app.updater.start_polling()
-    await app.updater.idle()
+    await app.run_polling()
 
+# 3. Dastur ishga tushirish
 if __name__ == "__main__":
     import asyncio
-    from telegram_bot import application
-
-    asyncio.run(application.run_polling())
+    asyncio.run(main())
