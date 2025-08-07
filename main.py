@@ -57,4 +57,4 @@ async def main():
     await app.updater.idle()
 
 import asyncio
-asyncio.run(main())
+    asyncio.run(application.run_polling())
