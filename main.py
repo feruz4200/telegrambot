@@ -20,8 +20,7 @@ async def handle_join_request(update: Update, context: ContextTypes.DEFAULT_TYPE
     await context.bot.send_video(
         chat_id=user_id,
         video="BAACAgIAAxkBAAMLaJRnvDASPPGq9v6ujXCYU-UTDuwAAjdyAAKuaKFIHA_Ac0_i5NQ2BA",
-        caption="SALOM SALOM QARINDOOSHIM 👋
-
+        caption="
 📢 2 kunlik BEPUL darslikda nimalar o‘rgatiladi?
 
 1️⃣ 🇨🇳Xitoyning Ichki va tashqi marketplace ning farqi
